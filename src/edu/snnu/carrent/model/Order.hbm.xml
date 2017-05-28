@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="Order" table="orders">
+		<id name="orderId" type="int" column="orderId">
+            <generator class="native"/>
+		</id>
+		<property name="takeCarDateStart" type="date" column="takeCarDateStart"/>
+		<property name="takeCarDateEnd" type="date" column="takeCarDateEnd"/>
+		<property name="backCarDateStart" type="date" column="backCarDateStart"/>
+		<property name="backCarDateEnd" type="date" column="backCarDateEnd"/>
+		<property name="orderTakePlace" type="string" column="orderTakePlace"/>
+		<property name="orderBackPlace" type="string" column="orderBackPlace"/>
+		<property name="orderTakeCity" type="string" column="orderTakeCity"/>
+		<property name="orderBackCity" type="string" column="orderBackCity"/>
+		<property name="payway" type="int" column="payway"/>
+		<property name="orderPrice" type="double" column="orderPrice"/>
+		<property name="isPay" type="int" column="isPay"/>
+		<property name="orderStatus" type="int" column="orderStatus"/>
+		
+		<many-to-one name="orderCar" class="Car">
+			<column name="carId"></column>
+		</many-to-one>
+		
+		<many-to-one name="orderCompany" class="Company">
+			<column name="companyId"></column>
+		</many-to-one>
+		
+		<many-to-one name="orderDriver" class="Driver">
+			<column name="driverId"></column>
+		</many-to-one>
+		
+		<many-to-one name="orderPackage" class="Package">
+			<column name="packageId"></column>
+		</many-to-one>
+		
+		<many-to-one name="orderProduct" class="Product">
+			<column name="productId"></column>
+		</many-to-one>
+		
+		
+		<many-to-one name="orderUser" class="User">
+			<column name="userid"></column>
+		</many-to-one>
+		
+		<set name="orderServices" table="serviceorder" inverse="false" lazy="false">
+			<key column="orderID"></key>
+			<many-to-many class="Service" column="serviceId"></many-to-many>
+		</set>
+		
+	</class>
+</hibernate-mapping>

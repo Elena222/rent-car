@@ -1,0 +1,114 @@
+
+.m-carInfor-top{
+    border:1px dashed gray;
+    margin-bottom: 30px;
+    margin-top: 83px;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+}
+.m-carInfor-c-left,.m-carInfor-c-right{
+    margin-top: 0;
+}
+.m-carInfor-c-middle{
+    background-color: white;
+}
+.m-carInfor-c-left-bigImage img{
+    height:160px;
+    width:100%;
+    /*border:1px solid gainsboro;*/
+}
+.m-carInfor-c-left-smallImage img{
+    height:55px;
+    width:100%;
+    /*border:1px solid darkgrey;*/
+}
+
+.m-carInfor-c-left-bigImage,.m-carInfor-c-left-scar{
+    padding-left:0;
+    padding-right:5px;
+    padding-top:20px;
+}
+.m-carInfor-c-right-ico{
+    padding-left:0;
+    padding-right:5px;
+    padding-top:40px;
+    padding-bottom: 20px;
+}
+
+.m-carInfor-c-left-info，.m-carInfor-c-right-info{
+    /*border:1px solid darkgrey;*/
+    margin-top:20px;
+    padding-left:5px;
+    margin-bottom:20px;
+}
+
+/*.m-carInfor-middle-comInfo table{*/
+
+    /*width: 30%;*/
+/*}*/
+
+.m-carInfor-c-middle-carPrice,.m-carInfor-c-middle-carPay,.car-service{
+    padding:20px;
+    border:1px solid darkgray;
+    background:white;
+
+}
+.m-carInfor-c-middle-carPrice a,.m-carInfor-c-left-info a{
+
+    color:red;
+}
+.m-carInfor-c-middle-carPrice a:hover,.m-carInfor-c-left-info a:hover{
+    text-decoration: none;
+    color:#57A7F7;
+}
+.m-carInfor-middle-carPay-inp input{
+    width:80%;
+    height:45px;
+    border-radius: 12px;
+    background-color: #DD2844;
+    font-size:16px;
+    font-weight:600;
+
+}
+
+
+
+
+.m-carInfor-middle-comInfo-ico img{
+    width:100%;
+    height:100%;
+
+}
+
+.m-carInfor-middle-comInfo{
+    background-color: beige;
+    margin-left: 60px;
+    margin-top:40px;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:20px;
+    width:80%;
+}
+
+.m-carInfor-middle-comInfo table{
+    /*width:100px;*/
+}
+.m-carInfor-middle-comInfo tr td{
+    /*border:1px dotted black;*/
+    border-top-style: none;
+    /*width:100%;*/
+    height:60px;
+    /*box-shadow: inset 1px 1px 10px white;*/
+}
+.m-carInfor-middle-comInfo tr td p{
+    line-height:40px;
+    padding-top:10px;
+    font-size:15px;
+    padding-left:30px;
+    width:235px;
+    letter-spacing: 1px;
+}
+.m-carInfor-middle-comInfo input{
+    width:80%;
+    height:50px;
+}

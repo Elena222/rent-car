@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="User" table="user">
+		<id name="userId" type="int" column="userId">
+            <generator class="native"/>
+		</id>
+		<property name="userName" type="string" column="userName" />
+		<property name="passWord" type="string" column="passWord" />
+		<property name="userTel" type="string" column="userTel" />
+		<property name="userMail" type = "string" column = "userMail"/>
+		<set name="userOrders">
+			<key column="userId"></key>
+			<one-to-many class="Order"/>
+		</set>
+		
+		<set name="userDrivers" table="userdriver" inverse="false" lazy="false">
+			<key column="userID"></key>
+			<many-to-many class="Driver" column="driverId"></many-to-many>
+		</set>
+
+	</class>
+</hibernate-mapping>

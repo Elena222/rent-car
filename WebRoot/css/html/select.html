@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>车辆筛选页面</title>
+
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+
+    <link href="../bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+
+    <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/select.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link rel="stylesheet" href="../css/foot.css">
+</head>
+
+<body>
+<div class="c-all"><!--包含整个页面-->
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登录</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row c-message"><!--显示用户已选时间地点-->
+        <div class="container">
+            <div class=" col-xs-12">
+                <div class="col-xs-3">
+                    <p > 取车城市：</p>
+                    <form class="bring-car">
+                        <select name="bring-pk" id="bring-pk">
+                            <option value="这里显示取车城市">这里显示取车城市</option>
+                            <option value="1">巴黎</option>
+                            <option value="2">旧金山</option>
+                            <option value="3">奥地利</option>
+                            <option value="4">墨尔本</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <p > 还车城市：</p>
+                    <form class="bring-car">
+                        <select name="bring-pk" id="back-pk" >
+                            <option value="这里显示还车城市">这里显示还车城市</option>
+                            <option value="巴黎">巴黎</option>
+                            <option value="旧金山">旧金山</option>
+                            <option value="奥地利">奥地利</option>
+                            <option value="墨尔本">墨尔本</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <p > 取车时间：</p>
+                    <form class="bring-car">
+                        <select name="bring-tk" id="bring-tk">
+                            <option value="这里显示取车时间">这里显示取车时间</option>
+                            <option value="2016.1.3">2016.1.3</option>
+                            <option value="2016.2.5">2016.2.5</option>
+                            <option value="2016.4.2">2016.4.2</option>
+                            <option value="2016.5.2">2016.5.2</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <p > 还车时间：</p>
+                    <form class="bring-car">
+                        <select name="bring-tk" id="back-tk">
+                            <option value="这里显示还车时间">这里显示还车时间</option>
+                            <option value="2016.1.3">2016.1.3</option>
+                            <option value="2016.2.5">2016.2.5</option>
+                            <option value="2016.4.2">2016.4.2</option>
+                            <option value="2016.5.2">2016.5.2</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div><!--显示用户已选时间地点-->
+
+
+
+
+
+    <div class=" place-change"><!--用户选择具体取车和还车位置-->
+        <div class=" container">
+            <div class="row">
+                <div class=" col-xs-12 position-bring">
+                    <p><b>取车位置:</b></p>
+                    <ul class="sel">
+                        <li>
+                            <a href="#" class="airport"  role="button">取车位置1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置5</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置6</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置7</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置8</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">取车位置9</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-xs-12 position-back">
+                    <p><b>还车位置:</b></p>
+                    <ul class="sel">
+                        <li>
+                            <a href="#" class="airport" role="button">取车位置1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置5</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置6</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置7</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置8</a>
+                        </li>
+                        <li>
+                            <a href="#" class="airport">还车位置9</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!--用户选择具体取车和还车位置-->
+
+
+
+
+    <div class="c-option">
+        <div class="container">
+            <div class=" row car-type"><!--选择车型-->
+                <div class="col-xs-1 ">
+                    <p><b>车型组:</b></p>
+                </div>
+                <div class="col-xs-3 type" >
+                    <div class="car-img" >
+                        <p>不限车型</p>
+                        <img src="../image/all-car-type.png" alt="不限车型" >
+                        <p>所有车型</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <p>微型轿车</p>
+                        <img src="../image/w.jpg" href="select.html" alt="微型">
+                        <p>城市代步</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <p>小型轿车</p>
+                        <img href="select.html" src="../image/x.jpg" alt="小型">
+                        <p>2人短途</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <P>紧凑型轿车</P>
+                        <img href="select.html" src="../image/j.jpg" alt="紧凑">
+                        <p>4人短途</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <p>高级轿车</p>
+                        <img href="select.html" src="../image/g.jpg" alt="高级">
+                        <p>4人长途</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <p>SUV</p>
+                        <img href="select.html" src="../image/SUV.jpg" alt="SUV">
+                        <p>越玩越野</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <P>MPV</P>
+                        <img href="select.html" src="../image/MVP.jpg" alt="MPV">
+                        <p>全家总动员</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 type">
+                    <div class="car-img">
+                        <p>中大型轿车</p>
+                        <img src="../image/z.jpg" alt="中大型">
+                        <p>4人长途</p>
+                    </div>
+                </div>
+            </div><!--选择车型-->
+
+            <div class="row car-seat"><!--选择座位数-->
+                <div class="col-xs-1">
+                    <p><b>车辆座位:</b></p>
+                </div>
+                <div class="col-xs-11">
+                    <input style="color: white" type="submit" name="com" class="butt" value="不限"/>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-seat1" value="option1" class="car-seat"> 5座及以下
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-seat2" value="option2" class="car-seat"> 5座以上
+                    </label>
+                </div>
+            </div><!--选择座位数-->
+
+            <div class="row car-com"><!--选择租车公司-->
+                <div class="col-xs-1">
+                    <p><b>租车公司:</b></p>
+                </div>
+                <div class="col-xs-11">
+                    <input style="color: white" type="submit" name="com" class="butt" value="不限"/>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com1" value="option1" class="car-com"> Avis
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com2" value="option1" class="car-com"> Alamo
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com3" value="option1" class="car-com"> Budgt
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com4" value="option1" class="car-com"> Enterprise
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com5" value="option1" class="car-com"> Hertz
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com6" value="option1" class="car-com"> Fox rent a car
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com7" value="option1" class="car-com"> Dollar
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="car-com8" value="option1" class="car-com"> Sixt
+                    </label>
+                </div>
+            </div><!--选择租车公司-->
+
+            <!--<div class="row term-list">&lt;!&ndash;列出客户已选择筛选条件&ndash;&gt;-->
+                <!--<div class="col-xs-1">-->
+                    <!--<p><b>已选条件:</b></p>-->
+                <!--</div>-->
+                <!--<div class="col-xs-11" id="selected">-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-11"></div>-->
+            <!--</div>&lt;!&ndash;列出客户已选择筛选条件&ndash;&gt;-->
+
+        </div>
+    </div>
+
+    <div class="c-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 main-left">
+                    <P class="top-word">洛杉矶机场平面图</P>
+                    <div class="map">
+                        <img  src="../image/小地图1.png"/>
+                        <div id="bottom-space">
+                            <p >
+                                机场内设有独立的租车大楼（Rental CarCenter)，大部分租车公司都聚集在此，可乘坐轻轨（Air Train)前往取车。
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" advertise">
+                        <div class="row adv">
+                            <img class="col-xs-4" src="../image/license-54x40.png">
+                            <div class=" col-xs-8">
+                                <p class="tp">支持中国驾照租车</p>
+                                <p>在美国租车，只需提前对中国驾照进行驾照翻译认证即可。</p>
+                            </div>
+                        </div>
+                        <div class="row adv1">
+                            <img class="col-xs-4" src="../image/invoice-54x40.png">
+                            <div class=" col-xs-8">
+                                <p class="tp">提供正式发票</p>
+                                <p>大部分预付全额套餐支持开具正式发票，可在详情页查看</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-9 main-right">
+                    <P class="row top-word">以下是可供您选择的车型组</P>
+                    <div class="row main-right-top"><!--进行筛选的导航栏-->
+                        <div class="col-xs-6 btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">综合</button>
+                            <button type="button" class="btn bt n-default">租金</button>
+                        </div>
+                        <!--<div class="col-xs-2">-->
+                            <!--<div class="checkbox">-->
+                                <!--<label>-->
+                                    <!--<input type="checkbox"/> 查看指定车型-->
+                                <!--</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="buy col-xs-2">
+                            <select class="form-control">
+                                <option>支付方式</option>
+                                <option>预付全额</option>
+                                <option>预付定金</option>
+                                <option>到店支付</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3 money-type">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default buy-but">日租金</button>
+                                <button type="button" class="btn btn-default buy-but">总租金</button>
+                            </div>
+                        </div>
+                    </div><!--进行筛选的导航栏-->
+                    <div class="row main-right-bottom">
+                        <div class="col-xs-12" id = 'carResults'>
+                            <div class="row car-massage"><!--车型组详细信息-->
+                                <div class="col-xs-2">
+                                    <img src="../image/car-detail.png"/>
+                                </div>
+                                <div class="col-xs-7">
+                                    <p><b>起亚 Rio 或同组车型 <span style="font-size: 14px">（类似大众POLO、本田飞度）</span></b></p>
+                                    <ul>
+                                        <li>自动挡</li>
+                                        <li>4门</li>
+                                        <li>5座</li>
+                                        <li>经济省油适合两人短途</li>
+                                    </ul>
+                                    <p style="font-size: 14px;clear: both;">空间：后排空间较为狭窄，建议乘坐2人+2行李箱</p>
+                                </div>
+                                <div class="price-none col-xs-2 pull-right">
+                                    <h2><span style="color:#df4a43 ">￥456</span><span style="font-size: 14px">/天起</span></h2>
+                                </div>
+                            </div><!--车型组详细信息-->
+                            <div class="row car-meal "><!--一家公司的详细套餐-->
+                                <table class="col-xs-12">
+                                    <tr class="pant-com">
+                                        <td class="col-xs-2">
+                                            <img src="../image/hertz.png">
+                                        </td>
+                                        <td class="col-xs-1" >
+                                            <p>Hertz</p>
+                                        </td>
+                                        <td class="col-xs-3 assess" align="right" >
+                                            <p class="assess-p" >非常好
+                                                <span class="small">4.6分</span>
+                                            </p>
+                                        </td>
+                                        <td class="col-xs-7">
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        无线下中介服务
+                                                    </td>
+                                                     <td class="col-xs-3">
+                                                        ￥234/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥456/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导+线路规划
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        私人定制
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥1678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--第一家公司的详细套餐-->
+                            <div class="row car-massage"><!--车型组详细信息-->
+                                <div class="col-xs-2">
+                                    <img src="../image/car-detail.png"/>
+                                </div>
+                                <div class="col-xs-7">
+                                    <p><b>起亚 Rio 或同组车型 <span style="font-size: 14px">（类似大众POLO、本田飞度）</span></b></p>
+                                    <ul>
+                                        <li>自动挡</li>
+                                        <li>4门</li>
+                                        <li>5座</li>
+                                        <li>经济省油适合两人短途</li>
+                                    </ul>
+                                    <p style="font-size: 14px;clear: both;">空间：后排空间较为狭窄，建议乘坐2人+2行李箱</p>
+                                </div>
+                                <div class="price-none col-xs-2 pull-right">
+                                    <h2><span style="color:#df4a43 ">￥456</span><span style="font-size: 14px">/天起</span></h2>
+                                </div>
+                            </div><!--车型组详细信息-->
+                            <div class="row car-meal "><!--一家公司的详细套餐-->
+                                <table class="col-xs-12">
+                                    <tr class="pant-com">
+                                        <td class="col-xs-2" style="width: 16%">
+                                            <img src="../image/alamo.png">
+                                        </td>
+                                        <td class="col-xs-1" style="width: 24%">
+                                            <p>Alamo</p>
+                                        </td>
+                                        <td class="col-xs-2 assess"  >
+                                            <p class="assess-p">非常好
+                                                <span class="small">4.6分</span>
+                                            </p>
+                                        </td>
+                                        <td class="col-xs-7">
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        无线下中介服务
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥234/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥456/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导+线路规划
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        私人定制
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥1678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--第二家公司的详细套餐-->
+                            <div class="row car-massage"><!--车型组详细信息-->
+                                <div class="col-xs-2">
+                                    <img src="../image/car-detail.png"/>
+                                </div>
+                                <div class="col-xs-7">
+                                    <p><b>起亚 Rio 或同组车型 <span style="font-size: 14px">（类似大众POLO、本田飞度）</span></b></p>
+                                    <ul>
+                                        <li>自动挡</li>
+                                        <li>4门</li>
+                                        <li>5座</li>
+                                        <li>经济省油适合两人短途</li>
+                                    </ul>
+                                    <p style="font-size: 14px;clear: both;">空间：后排空间较为狭窄，建议乘坐2人+2行李箱</p>
+                                </div>
+                                <div class="price-none col-xs-2 pull-right">
+                                    <h2><span style="color:#df4a43 ">￥456</span><span style="font-size: 14px">/天起</span></h2>
+                                </div>
+                            </div><!--车型组详细信息-->
+                            <div class="row car-meal "><!--一家公司的详细套餐-->
+                                <table class="col-xs-12">
+                                    <tr class="pant-com">
+                                        <td class="col-xs-2" style="width: 16%">
+                                            <img src="../image/budget.png">
+                                        </td>
+                                        <td class="col-xs-1" style="width: 24%">
+                                            <p>budget</p>
+                                        </td>
+                                        <td class="col-xs-2 assess"  >
+                                            <p class="assess-p">非常好
+                                                <span class="small">4.6分</span>
+                                            </p>
+                                        </td>
+                                        <td class="col-xs-7">
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        无线下中介服务
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥234/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥456/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导+线路规划
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        私人定制
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥1678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--第三家公司的详细套餐-->
+                            <div class="row car-massage"><!--车型组详细信息-->
+                                <div class="col-xs-2">
+                                    <img src="../image/car-detail.png"/>
+                                </div>
+                                <div class="col-xs-7">
+                                    <p><b>起亚 Rio 或同组车型 <span style="font-size: 14px">（类似大众POLO、本田飞度）</span></b></p>
+                                    <ul>
+                                        <li>自动挡</li>
+                                        <li>4门</li>
+                                        <li>5座</li>
+                                        <li>经济省油适合两人短途</li>
+                                    </ul>
+                                    <p style="font-size: 14px;clear: both;">空间：后排空间较为狭窄，建议乘坐2人+2行李箱</p>
+                                </div>
+                                <div class="price-none col-xs-2 pull-right">
+                                    <h2><span style="color:#df4a43 ">￥456</span><span style="font-size: 14px">/天起</span></h2>
+                                </div>
+                            </div><!--车型组详细信息-->
+                            <div class="row car-meal "><!--一家公司的详细套餐-->
+                                <table class="col-xs-12">
+                                    <tr class="pant-com">
+                                        <td class="col-xs-2" style="width: 16%">
+                                            <img src="../image/enterprise.png">
+                                        </td>
+                                        <td class="col-xs-1" style="width: 24%">
+                                            <p>enterprise</p>
+                                        </td>
+                                        <td class="col-xs-2 assess"  >
+                                            <p class="assess-p">非常好
+                                                <span class="small">4.6分</span>
+                                            </p>
+                                        </td>
+                                        <td class="col-xs-7">
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        无线下中介服务
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥234/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥456/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导+线路规划
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        私人定制
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥1678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--第四家公司的详细套餐-->
+                            <div class="row car-massage"><!--车型组详细信息-->
+                                <div class="col-xs-2">
+                                    <img src="../image/car-detail.png"/>
+                                </div>
+                                <div class="col-xs-7">
+                                    <p><b>起亚 Rio 或同组车型 <span style="font-size: 14px">（类似大众POLO、本田飞度）</span></b></p>
+                                    <ul>
+                                        <li>自动挡</li>
+                                        <li>4门</li>
+                                        <li>5座</li>
+                                        <li>经济省油适合两人短途</li>
+                                    </ul>
+                                    <p style="font-size: 14px;clear: both;">空间：后排空间较为狭窄，建议乘坐2人+2行李箱</p>
+                                </div>
+                                <div class="price-none col-xs-2 pull-right">
+                                    <h2><span style="color:#df4a43 ">￥456</span><span style="font-size: 14px">/天起</span></h2>
+                                </div>
+                            </div><!--车型组详细信息-->
+                            <div class="row car-meal "><!--一家公司的详细套餐-->
+                                <table class="col-xs-12">
+                                    <tr class="pant-com">
+                                        <td class="col-xs-2" style="width: 16%">
+                                            <img src="../image/enterprise.png">
+                                        </td>
+                                        <td class="col-xs-1" style="width: 24%">
+                                            <p>enterprise</p>
+                                        </td>
+                                        <td class="col-xs-2 assess"  >
+                                            <p class="assess-p">非常好
+                                                <span class="small">4.6分</span>
+                                            </p>
+                                        </td>
+                                        <td class="col-xs-7">
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        无线下中介服务
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥234/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥456/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        司导+线路规划
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="row">
+                                                <tr>
+                                                    <td class="col-xs-5">
+                                                        私人定制
+                                                    </td>
+                                                    <td class="col-xs-3">
+                                                        ￥1678/天
+                                                    </td>
+                                                    <td class="col-xs-2" >
+                                                        <a href="../html/carInfor.html" target="_blank" class="btn btn-danger">详情</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--第四家公司的详细套餐-->
+                        </div>
+                        <div class="col-xs-12 add-pages">
+                            <ul class="pagination pagination-lg">
+                                <li class="disabled"><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="footer"><!--页脚的公司介绍-->
+        <div class="container">
+            <div class="row c-friend">
+                <dl class="friend">
+                    <dt ><p>合作伙伴</p></dt>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                </dl>
+            </div>
+            <div class="row c-box">
+                <div class="col-xs-2">
+                    <p>关于</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>条款</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>帮助</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 ">
+                    <div class="pull-right">
+                        <img src="#"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row c-link">
+                <p>友情链接:</p>
+                <ul>
+                    <li >
+                        <a href="*">链接1</a>
+                    </li>
+                    <li>
+                        <a href="*">链接2</a>
+                    </li>
+                    <li>
+                        <a href="*">链接3</a>
+                    </li>
+                    <li>
+                        <a href="*">链接4</a>
+                    </li>
+                    <li>
+                        <a href="*">链接5</a>
+                    </li>
+                    <li>
+                        <a href="*">链接6</a>
+                    </li>
+                    <li>
+                        <a href="*">链接7</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="row c-bottom">
+                <a  href="*">Copyright ©2016 abc海外租车公司 版权所有  京ICP证012345号</a>
+            </div>
+        </div>
+    </div><!--页脚的公司介绍-->
+
+</div>
+</body>
+<script src="../js/indexNav.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/select.js"></script>
+</html>

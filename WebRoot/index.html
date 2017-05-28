@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/carInfor.css">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/foot.css">
+
+
+    <link href="../css/css0/ke.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/js0/jquery-1.9.1.min.js"></script>
+    <script src="../js/js0/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="../js/js0/jquery.zalki_hover_img.min-0.2.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('.main_box').ZalkiHoverImg(
+            );
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+<div class="c-all">
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登陆</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class=" c-search">
+        <div class="container-fluid" style="padding: 0;background-attachment: fixed">
+            <div class="c-backgroung">
+                <img src="../image/lsj.jpg" alt="背景图">
+            </div>
+            <div class="row" style="margin-top: -440px;">
+                <div class="col-xs-6 col-xs-offset-3 c-ground">
+
+                    <div class="bring">
+
+                        <p > 取车：</p>
+                        <form class="bring-car">
+                            <select name="bring-pk" id="bring-pk" >
+                                <option value="p1" selected="selected">请选择取车地点</option>
+                                <option value="巴黎">巴黎</option>
+                                <option value="旧金山">旧金山</option>
+                                <option value="奥地利">奥地利</option>
+                                <option value="墨尔本">墨尔本</option>
+                            </select>
+                            <select name="bring-tk" id="bring-tk">
+                                <option value="t1" selected="selected">请选择取车时间</option>
+                                <option value="2016.1.3">2016.1.3</option>
+                                <option value="2016.2.5">2016.2.5</option>
+                                <option value="2016.4.2">2016.4.2</option>
+                                <option value="2016.5.2">2016.5.2</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="back">
+                        <p> 还车：</p>
+                        <form class="back-car">
+                            <select name="back-pk" id="back-pk" >
+                                <option value="请选择还车地点" selected="selected">请选择还车地点</option>
+                                <option value="巴黎">巴黎</option>
+                                <option value="旧金山">旧金山</option>
+                                <option value="奥地利">奥地利</option>
+                                <option value="墨尔本">墨尔本</option>
+                            </select>
+                            <select name="back-tk" id="back-tk">
+                                <option value="请选择还车时间" selected="selected">请选择还车时间</option>
+                                <option value="2016.1.3">2016.1.3</option>
+                                <option value="2016.2.5">2016.2.5</option>
+                                <option value="2016.4.2">2016.4.2</option>
+                                <option value="2016.5.2">2016.5.2</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="c-but">
+                        <p >取还车时间均为当地时间！</p>
+
+                        <a href="../html/select.html" class="btn btn-danger" onclick="cok()">搜索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="m-main">
+
+        <div class="m-main-service">
+            <div class="container" style="padding-left:0;padding-right: 0">
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-3">
+                            <div style="float: left " class="m-service">
+                                <div class="angled-135 stripes">
+                                    <h4>租车就送国际驾照认证件。</h4>
+                                    <h3>有中国驾照就能租！</h3>
+                                </div>
+                                <div class="service-foot">
+                                    <p>驾照全球通：中国驾照，全球通行！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-xs-3">
+                            <div style="float: left" class="m-service">
+                                <div class="angled-136 stripes">
+                                    <h4>免费租用中文GPS。</h4>
+                                    <h3>立省100元/天！</h3>
+                                </div>
+                                <div class="service-foot" >
+                                    <p>免费中文GPS，一天净省80元租金！离线地图无需流量！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-xs-3">
+                            <div style="float: left" class="m-service">
+                                <div class="angled-137 stripes">
+                                    <h4>租车全网底价。</h4>
+                                    <h3>贵就双倍赔！</h3>
+                                </div>
+                                <div class="service-foot" >
+                                    <p>保证全网底价，贵就双倍赔！每月狂欢促，省钱省到家！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-xs-3">
+                            <div style="float: left" class="m-service">
+                                <div class="angled-138 stripes">
+                                    <h4>超级全险。</h4>
+                                    <h3>比柜台购买还便宜50%！</h3>
+                                </div>
+                                <div class="service-foot" >
+                                    <p>看得懂的租车保险，比柜台购买还便宜50%，5天理赔到账！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="m-main-sale">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 m-title">
+                        <p>当季精选特惠</p>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!--<div class="col-xs-3 sale-left">-->
+                        <!--<img src="../image/saleLeft.jpg" alt="">-->
+                    <!--</div>-->
+
+                    <div class="col-xs-3 sale-middle ">
+
+                        <img src="../image/saleMiddle1.jpg" alt="">
+                        <img src="../image/saleMiddle2.jpg" alt="">
+                        <img src="../image/saleMiddle3.jpg" alt="">
+                    </div>
+
+
+                    <div class="col-xs-3 sale-right">
+                       <div class="row sale-right-r">
+                            <div class="col-xs-12">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>美国纽约</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥200每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>澳大利亚墨尔本</p>
+                                    </div>
+                                </div>
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car1.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12">
+                                <div class=row>
+                                    <div class="col-xs-8 col-lg-offset-2">
+                                        <br><p>&nbsp;&nbsp;美国华盛顿<br><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-8 col-xs-offset-2">
+                                        <img src="../image/car2.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-xs-3 sale-right">
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>美国纽约</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥200每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>澳大利亚墨尔本</p>
+                                    </div>
+                                </div>
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car1.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-8 col-lg-offset-2">
+                                        <br><p>&nbsp;&nbsp;美国华盛顿<br><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-8 col-xs-offset-2">
+                                        <img src="../image/car2.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-xs-3 sale-right">
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>美国纽约</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥200每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <br><p>澳大利亚墨尔本</p>
+                                    </div>
+                                </div>
+                                <div class=row>
+                                    <div class="col-xs-10 col-lg-offset-1">
+                                        <p><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <img src="../image/car1.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sale-right-r">
+                            <div class="col-xs-12 ">
+                                <div class=row>
+                                    <div class="col-xs-8 col-lg-offset-2">
+                                        <br><p>&nbsp;&nbsp;美国华盛顿<br><span>￥190每天</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xs-8 col-xs-offset-2">
+                                        <img src="../image/car2.jpg" alt="car">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="m-main-question">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 m-title">
+                        <p>驾车的问题</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-7">
+
+
+                        <div class="row ">
+                            <div class="col-xs-5 image1">
+                                <div class="main_box user_style5" data-hipop="text_content">
+                                    <img src="../image/view.jpg" title alt="Img preview">
+                                    <p class="textTitle" style="font-size:20px"> 不认识路怎么办？ </p>
+                                    <p class="textBox">
+                                        我们提供全球中文GPS导航仪，预订即可免费租用。
+                                        <a href="#">（更多）</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-7 image1">
+                                <div class="main_box user_style6" data-hipop="text_content">
+                                    <img src="../image/view1.jpg" title alt="Img preview">
+                                    <p class="textTitle"> 外国交规不熟悉？ </p>
+                                    <p class="textBox">
+                                        外国交规与中国交规大同小异，细微区别见详情
+                                        <a href="#">（详情）</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-8 image2">
+                                <div class="main_box user_style7" data-hipop="text_content2">
+                                    <img src="../image/view2.jpg" title alt="Img preview">
+                                    <p class="textTitle"> 还是有顾虑 </p>
+                                    <p class="textBox">
+                                        外国道路救援系统发达，基本可以保障全程的驾驶安全。<br>
+                                        其他问题，让我们全年无休的24小时热线伺候您。<br><br><br>
+                                        <a href="#">客服</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 image2">
+                                <div class="main_box user_style8" data-hipop="rub">
+                                    <img src="../image/view3.jpg"> <a href="#" class="r_board">Any question</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-xs-5 question ">
+
+                        <!--<div class="main_box user_style12" data-hipop="one-horizontal">-->
+                            <!--<img src="../image/view1.jpg">-->
+                            <!--<a href="#" class="popup"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec est viverra-->
+                                <!--velit venenatis faucibus. Maecenas adipiscing, lectus a hendrerit vulputate,-->
+                                <!--tellus urna accumsan felis, semper tempor mauris massa in odio. Duis sit-->
+                                <!--amet nunc eu sem sagittis malesuada. </a>-->
+                        <!--</div>-->
+
+                        <div class="wenTi">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p style="font-size: 23px;font-family: '微软雅黑';">租车常见问题：<br><br></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">平台有哪些特色服务呢？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">我可以不租车直接购买特色服务吗？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">如何查看公司的驾照要求？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">如何预订免费中文GPS？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">如何取消和修改订单？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">我的国际租车订单能开发票吗？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">国际租车对驾车者的年龄有何限制？</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p><a href="#">国际租车包含的费用有哪些？<br><br></a></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-3 button">
+                                    <button>预订流程</button>
+                                </div>
+                                <div class="col-xs-3 button">
+                                    <button>订单填写</button>
+                                </div>
+                                <div class="col-xs-4 button">
+                                    <button>取车必备材料</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-3 button">
+                                    <button>取车流程</button>
+                                </div>
+                                <div class="col-xs-4 button">
+                                    <button>自驾注意事项</button>
+                                </div>
+                                <div class="col-xs-3 button">
+                                    <button>事故处理</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-3 button">
+                                    <button>还车流程</button>
+                                </div>
+                                <div class="col-xs-3 button">
+                                    <button>保险理赔</button>
+                                </div>
+                                <div class="col-xs-4 button">
+                                    <button>押金/预授权</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="m-main-assess">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 m-title">
+                        <p>租车评价</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-7 assess-left">
+                        <div class="row">
+                            <div class="col-xs-5 "style="padding-left: 2px;padding-right: 2px">
+                                <img src="../image/question.jpg" alt="">
+                                <p style="margin: -490px 25px auto 25px;color:white;font-size:18px;font-weight: 500;letter-spacing: 5px">
+                                    <span style="font-size: 20px;color:black;font-weight: 600;">高晓松说：</span><br><br>
+                                    "租车自驾游是出国玩深度旅游的好选择，时间自由，行程也可以随时调整掌握自驾游的技巧，选择可靠的平台，在国外才能顺利出行，自由自驾！"
+                                </p>
+                            </div>
+
+                            <div class="col-xs-7" style="padding-left: 2px">
+                                <img src="../image/question1.jpg" alt="" style="width: 100%;">
+                                <!--<p style="margin: -450px 25px auto 30px;color:white;font-size:25px;font-weight: 500;letter-spacing: 5px">-->
+                                   <!--好评如潮<br>-->
+                                    <!--来自有用户的声音！-->
+                                <!--</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 assess-right">
+                        <div class="row">
+                            <div class="col-xs-12 assess">
+                                <div class="assess-right-content">
+                                    <ul>
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt><img src="../image/view1.jpg" /></dt>
+                                                        <dd><p>*丽媛</p></dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt><p style="float: left;font-weight:200"><br>
+                                                        第二次在租租车网站租车了，非常满意。服务规范，客服热情，
+                                                        网站价格比国外的更实惠。租车网界面设计的非常清晰易懂，特别是关于保险，
+                                                        以前在国外网站最困惑的是……
+                                                    </p></dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt>
+                                                            <img src="../image/view2.jpg" />
+                                                        </dt>
+                                                        <dd>
+                                                            <p>*丽媛</p>
+                                                        </dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt>
+                                                        <p style="float: left;font-weight:200"><br>
+
+                                                            准备要充分，多查查大家的心得，驾照公证的事是以防万一，实际是只要你
+                                                            自己是个遵纪守法的人，有良好的驾驶习惯，没有加塞儿、占道、按喇叭
+                                                            、抢道、乱停车等陋习……
+
+                                                        </p>
+                                                        </dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt><img src="../image/view3.jpg" /></dt>
+                                                        <dd><p>*丽媛</p></dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt><p style="float: left;font-weight:200"><br>
+
+                                                        其实也没什么好多说的了,上面该说的都交代了
+                                                        租租车方面做得相当不错,基本上能够解决你任何的问题
+                                                        不管是订车时的犹豫不决,还是取车时的懵懂不
+                                                        安,还是用……
+
+                                                    </p></dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt><img src="../image/view3.jpg" /></dt>
+                                                        <dd><p>*丽媛</p></dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt><p style="float: left;font-weight:200"><br>一个字好，两个字方便，三个字服务佳!一个字好，两个字方便，三个字服务佳</p></dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt><img src="../image/view.jpg" /></dt>
+                                                        <dd><p>*丽媛</p></dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt><p style="float: left;font-weight:200"><br>
+
+                                                        租车靠谱！提前三到四个月租车会有意想不到的低价格！最最重要的就是小心驾驶，遵守规则。
+
+                                                    </p></dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                        <a href=""><li>
+                                            <div class="row">
+                                                <div class="col-xs-3 question-image">
+                                                    <dl>
+                                                        <dt><img src="../image/view.jpg" /></dt>
+                                                        <dd><p>*丽媛</p></dd>
+                                                    </dl >
+                                                </div>
+
+                                                <div class="col-xs-9">
+                                                    <dl>
+                                                        <dt><p style="float: left;font-weight:200"><br>
+
+                                                        虽然第一次在国外开车比较紧张，
+                                                        还好旅途后并没有收到额外的ticket，算是比较顺利，就是停
+                                                        车方面对划线把握不太准确，被罚款了
+
+                                                    </p></dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+
+
+                                        </li></a>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row c-friend">
+            <div class="col-xs-12">
+                <dl class="friend">
+                    <dt ><p>合作伙伴</p></dt>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row c-box">
+            <div class="col-xs-2">
+                <p>关于</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>条款</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>帮助</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 ">
+                <div class="pull-right">
+                    <img src="#"/>
+                </div>
+            </div>
+        </div>
+        <div class="row c-link">
+            <div class="col-xs-12">
+                <p >友情链接：</p>
+                <ul >
+                    <li>
+                        <a>链接1</a>
+                    </li>
+                    <li>
+                        <a>链接2</a>
+                    </li>
+                    <li>
+                        <a>链接3</a>
+                    </li>
+                    <li>
+                        <a>链接4</a>
+                    </li>
+                    <li>
+                        <a>链接5</a>
+                    </li>
+                    <li>
+                        <a>链接6</a>
+                    </li>
+                    <li>
+                        <a>链接7</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row c-bottom">
+            <a  href="*" style="color: white;">&copy;&nbsp;2016 abc海外租车公司 版权所有  京ICP证012345号</a>
+
+        </div>
+    </div>
+    <br>
+</div>
+
+
+
+<script src="../js/indexNav.js"></script>
+<script src="../js/index.js"></script>
+
+</body>
+</html>

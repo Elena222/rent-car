@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单确认</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/orderConfirm.css">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link rel="stylesheet" href="../css/foot.css">
+
+</head>
+<body>
+
+<div class="c-all">
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登陆</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="m-order-msg" id = 'm-order-msg'>
+        <div class="container" style="background-color:white;padding:20px 0 20px 0 ">
+            <div class="row m-order-top-title">
+                <div class="col-xs-7 col-xs-offset-1 m-order-top-cleft">
+                    <p>订单预定成功，请尽快完成付款哦！！</p>
+                </div>
+                <div class="col-xs-4 pull-right m-order-top-cright">
+                    <p>需支付：￥1394</p>
+                </div></div>
+            <div class="row m-order-top-content">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p>价格浮动频繁，<span style="color:red;font-size: 16px">59分59秒</span>内完成支付，逾时订单将自动取消</p>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p>商品信息：美国洛杉矶租车订单</p>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p>订单编号：24637468939</p><br>
+                </div>
+
+            </div>
+
+
+            <div class="row m-order-middle">
+                <div class="col-xs-10 col-xs-offset-1">
+
+                    <div class="row">
+                        <div class="col-xs-12  m-order-middle-border">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 m-order-middle-carT">
+                            <p>车辆信息：</p>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+
+
+                        <div class="col-xs-2 m-order-middle-image">
+                            <img src="../image/ordercar.png" alt="车辆图片">
+                        </div>
+
+
+                        <div class="col-xs-5">
+
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p>现代****或同组车型<span>手动挡/4门/5座</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">取车：2016年01月03日澳大利亚墨尔airport</div>
+                                <div class="col-xs-12">还车：2016年02月05日澳大利亚墨尔airport</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-4 ">
+                            <p style="margin-left: 200px">租期：7天</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="m-order-middle-border"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 m-order-middlepP">
+                            <p>驾驶员信息：</p>
+                        </div>
+                        <br></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <p>驾驶人：丽媛</p>
+                                </div>
+                                <div class="col-xs-5">
+                                    <p>联系人：张明明</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <p>年龄：20</p>
+                                </div>
+                                <div class="col-xs-5">
+                                    <p>手机号：<span style="color: #0e2744">+86</span>131-3938-3829</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <p>驾照类型：中国驾照</p>
+                                </div>
+                                <div class="col-xs-5">
+                                    <p>邮箱地址：82987387@qq.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="m-order-pay">
+        <div class="container" style="background-color:white;padding:20px 0 20px 0 ">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 m-order-pay-way">
+                    <p>支付方式：</p>
+                </div>
+            </div>
+
+            <div class="row m-order-pay-card">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home" data-toggle="tab" aria-expanded="false">支付平台</a></li>
+                        <li class=""><a href="#profile" data-toggle="tab" aria-expanded="true">信用卡</a></li>
+                        <li class=""><a href="#home" data-toggle="tab" aria-expanded="false">储蓄卡</a></li>
+                        <li class=""><a href="#profile" data-toggle="tab" aria-expanded="true">海外信用卡</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content m-o-card">
+                        <div class="tab-pane fade " id="home">
+                            <div style="padding: 70px 70px 70px 0">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="../image/card1.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4  col-xs-offset-1">
+                                        <img src="../image/card2.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="../image/card3.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card4.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade active in" id="profile">
+                            <div style="padding:  70px 70px 70px 0">
+                                <div class="row">
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card1.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card2.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card3.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card4.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="dropdown1">
+                            <div style="padding: 70px 70px 70px 0">
+                                <div class="row">
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card1.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card2.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card3.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card4.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="dropdown2">
+                            <div style="padding: 70px 70px 70px 0">
+                                <div class="row">
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card1.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 ">
+                                        <img src="../image/card2.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card3.jpg" alt="银行卡">
+                                    </div>
+                                    <div class="col-xs-4 col-xs-offset-1">
+                                        <img src="../image/card4.jpg" alt="银行卡">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-7 m-order-pay-price">
+                    <p style="font-size: 18px">需支付：￥1394</p>
+                    <a href="#" class="btn btn-danger" style="width:150px;">立即预定</a>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="footer" >
+    <div class="container">
+        <div class="row c-friend">
+            <div class="col-xs-12">
+                <dl class="friend">
+                    <dt>
+                    <p>合作伙伴</p></dt>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row c-box">
+            <div class="col-xs-2">
+                <p>关于</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>条款</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>帮助</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 ">
+                <div class="pull-right">
+                    <img src="#"/>
+                </div>
+            </div>
+        </div>
+        <div class="row c-link">
+            <div class="col-xs-12">
+                <p>友情链接：</p>
+                <ul>
+                    <li>
+                        <a>链接1</a>
+                    </li>
+                    <li>
+                        <a>链接2</a>
+                    </li>
+                    <li>
+                        <a>链接3</a>
+                    </li>
+                    <li>
+                        <a>链接4</a>
+                    </li>
+                    <li>
+                        <a>链接5</a>
+                    </li>
+                    <li>
+                        <a>链接6</a>
+                    </li>
+                    <li>
+                        <a>链接7</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row c-bottom">
+            <a href="*" style="color: white;">Copyright ©2016 abc海外租车公司 版权所有 京ICP证012345号</a>
+
+        </div>
+    </div>
+    <br>
+</div>
+<script src="../js/indexNav.js"></script>
+<script src="../js/orderConfirm.js"></script>
+</body>
+</html>

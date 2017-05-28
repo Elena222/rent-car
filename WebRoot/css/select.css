@@ -1,0 +1,356 @@
+/**{*/
+/*padding: 0;*/
+/*margin:0;*/
+/*border:0;*/
+/*font-family:"微软雅黑";*/
+/*}*/
+/*html{*/
+/*!*overflow:-Scroll;*!*/
+/*overflow-x:hidden;*/
+/*max-width:2000px;*/
+/*min-width:1000px;*/
+/*min-height: 1000px;*/
+/*width:100%;*/
+/*height: 100%;*/
+/*margin:0 auto;*/
+/*padding:0;*/
+/*}*/
+body{
+    background-color: #F2F2F2;
+}
+.c-header{
+    background-color: #e1e1e1;
+}
+.nav{
+    width:100%;
+    height: auto;
+
+}
+/*.c-nav .row{*/
+/*margin-top: 0;*/
+/*}*/
+.c-image img{
+    width: 50%;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.c-content{
+    padding-top: 38px;
+}
+
+.nav-pills a{
+    font-size: 18px;
+    color: #3c3c3c;
+}
+.nav-pills a:hover{
+    color: #2aabd2;
+}
+
+
+
+.c-message{
+    border-top: 1px solid lightgrey;
+    padding-top: 80px;
+    margin-top: 20px;
+}
+.c-message .container{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color:#C7D0D5;
+    border: none;
+}
+.c-message .col-xs-1{
+    padding-top: 30px;
+
+}
+.c-message .col-xs-3 form select{
+    width:100%;
+    height:40px;
+    letter-spacing: 4px;
+}
+
+.c-message .col-xs-1 .btn{
+    width:100px;
+    background-color: #F2F2F2;
+    border:none ;
+}
+
+
+
+.place-change {
+    margin-top: -5px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.place-change .container{
+    background: white;
+    padding-left: 50px;
+}
+.position-bring{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.place-change p{
+    /*font-size: 16px;*/
+    float: left;
+}
+.place-change ul li{
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.place-change ul li a{
+    text-decoration: none;
+}
+.place-change ul li a:hover{
+    /*background-color: #df4a43;*/
+    color: gray;
+    border-radius: 0;
+}
+
+
+
+.c-option {
+    margin-top: 20px;
+}
+.c-option .container{
+    background-color: white;
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.car-type,
+.car-seat,
+.car-com{
+    margin-bottom: 20px;
+}
+::selection{
+    /*background-color: #E13300; color: white; */
+    border: 1px solid blue;
+}
+.car-type .car-img:hover{
+    border: 1px solid #df4a43;
+}
+/*.car-type .car-img:focus{*/
+    /*border:1px solid #df4a43;*/
+/*}*/
+
+.car-type .col-xs-2{
+    width: 12%;
+}
+.car-type .col-xs-3{
+    width:11%;
+}
+.car-type .car-img{
+    border: 1px solid #BDBDBD;
+    width: 100%;
+    /*min-width: 92px;*/
+}
+.car-type .car-img p{
+    text-align: center;
+}
+.car-type .car-img img{
+    width: 90%;
+}
+
+.c-option .butt{
+    background-color: #df4a43;
+    border: none;
+    width:40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.car-seat .checkbox-inline,
+.car-com .checkbox-inline{
+    margin-left: 30px;
+}
+.c-main{
+    margin-top: 30px;
+}
+.c-main .col-xs-3{
+    width:30%;
+}
+.c-main .col-xs-9{
+    width: 70%;
+}
+.main-left img{
+    height: 260px;
+    width:100%;
+}
+.main-left {
+    padding-left: 0;
+}
+.main-left .top-word,
+.main-right .top-word{
+    font-size: 18px;
+}
+.main-left #bottom-space{
+    background:white;
+    padding:6px 20px;
+    width:100%;
+    border-top:1px solid #E6E6E6;
+    line-height: 150%;
+}
+#bottom-space p{
+    font-size: 12px;
+}
+.main-left .advertise{
+    margin-top: 20px;
+    width:100%;
+}
+.advertise {
+    background-color: white;
+    padding:6px 20px;
+}
+.advertise  img{
+    width: auto;
+    height: auto;
+}
+.advertise .col-xs-8{
+    padding: 0;
+}
+.adv p,.adv1 p{
+    font-size: 12px;
+    line-height: 150%;
+}
+.adv .tp,.adv1 .tp{
+    font-size: 16px;
+}
+.adv1{
+    border-top: 1px dashed #E6E6E6;
+    padding-top: 10px;
+}
+.main-right-top{
+    background-color:#b2c8db;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.main-right-top .buy .form-control{
+    /*height: 30px;*/
+    padding: 0;
+}
+/*.main-right-top .checkbox{*/
+    /*margin-top: 10px;*/
+/*}*/
+
+.main-right-top  button{
+    padding: 2px;
+    width: 50px;
+    height: 30px;
+}
+
+.main-right-top .btn{
+
+
+}
+.main-right-top .buy .form-control{
+    width:100px;
+    height: 30px;
+}
+.main-right-top  .buy-but{
+    width: 60px;
+    height: 30px;
+}
+
+.main-right-top .money-type,
+.main-right-top .form-control {
+    text-align: center;
+}
+.main-right-bottom{
+    margin-top: 20px;
+}
+.car-massage{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #F2F2F2;
+    background-color: white;
+}
+
+.car-massage .col-xs-2{
+    width: 20%;
+}
+.car-massage .col-xs-7{
+    width:60%;
+}
+.car-massage .col-xs-7 p{
+    font-size: 22px;
+}
+.car-massage .col-xs-7 ul{
+    float: left;
+    padding-left: 15px;
+}
+.car-massage .col-xs-7 li{
+    float:left;
+    margin-right: 30px;
+}
+
+.car-meal:hover{
+    background-color: #ECF9F6;
+}
+
+.price-none{
+    padding-top: 30px;
+}
+.main-right-bottom table{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.car-meal{
+    margin-bottom: 2px;
+    padding: 10px 30px;
+    background-color: white;
+}
+
+.car-meal table tr{
+    /*padding-top: 20px;*/
+
+}
+.car-meal .col-xs-1{
+    /*padding-top: 30px;*/
+}
+.car-meal table .assess-p{
+    font-size: 18px;
+    /*font-weight: bold;*/
+    margin-top: -25px;
+    /*text-align: left;*/
+}
+.assess-p .small{
+    font-size: 14px;
+    color:#df4a43 ;
+}
+.car-meal .col-xs-3 a{
+    text-decoration: none;
+    color:  #df4a43;
+}
+.car-meal .assess{
+    padding-top: 30px;
+}
+.car-meal  .col-xs-1 p{
+    font-size: 24px;
+    /*padding-top: 40px;*/
+    /*padding-bottom: 20px;*/
+}
+.car-meal .col-xs-7 table tr{
+    border-bottom: 1px dashed #E6E6E6;
+
+}
+.car-meal .col-xs-7 td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.add-pages {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+

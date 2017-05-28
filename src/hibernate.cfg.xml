@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="foo">
+			<!-- 配置数据库信息 -->
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="connection.url">jdbc:mysql:///carrent</property>
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.username">root</property>
+<property name="connection.password">123</property>
+			<!-- 其他配置 -->
+<property name="show_sql">fault</property>
+
+<!-- create：先删除，再创建 update：如果表不存在就创建，不一样就更新，一样就什么都不做。 create-drop：初始化时创建表，SessionFactory执行close()时删除表。 validate：验证表结构是否一致，如果不一致，就抛异常。 -->
+<property name="hbm2ddl.auto">update</property>
+			
+			<!-- 导入映射文件  -->
+			<mapping resource="edu/snnu/carrent/model/Order.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/User.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Car.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Type.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Company.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Driver.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Package.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Product.hbm.xml"/>
+			<mapping resource="edu/snnu/carrent/model/Service.hbm.xml"/>
+			
+	</session-factory>
+</hibernate-configuration>

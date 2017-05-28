@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="l">
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息填写页</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="../js/jquery-1.7.2.js"></script>
+
+    <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link href="../css/memu.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/foot.css">
+    <style>
+        input{
+            border:1px solid darkgray;
+        }
+    </style>
+</head>
+<body>
+<div class="c-all">
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登录</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-header" style="background-color: #e1e1e1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-1" style="margin-top:87px">
+                    <div class="box-left" style="background-color:white ;border:1px solid darkgray;padding:0 50px 30px 50px">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="box-1">
+                                    <div id="legend" class="">
+                                        <legend class="">驾驶员信息</legend>
+                                    </div>
+                                    <div class="control-group">
+
+                                        <!-- 姓输入-->
+                                        <label class="control-label" >姓（拼音或英文）</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="如：LI" class="input-xlarge form-control" title="请填写驾驶人护照姓名（拼音/英文）" data-errormessage-required="请填写驾驶人护照姓名（拼音/英文）" data-errormessage-pinyin-name="请填写正确的驾驶人护照姓名（拼音/英文）" data-tip-position="10" data-tip-align="long" data-tip-content="<img src=''>" data-widget-cid="widget-13" >
+                                            <p class="help-block">请填写驾驶人护照姓名（拼音/英文）</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group ">
+
+                                        <!-- 名输入-->
+                                        <label class="control-label ">名（拼音或英文）</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="如：MIN" class="input-xlarge form-control" title="请填写驾驶人护照姓名（拼音/英文）" data-errormessage-required="请填写驾驶人护照姓名（拼音/英文）" data-errormessage-pinyin-name="请填写正确的驾驶人护照姓名（拼音/英文）" data-tip-position="10" data-tip-align="long" data-tip-content="<img src=''>" data-widget-cid="widget-13">
+                                            <p class="help-block">请填写驾驶人护照姓名（拼音/英文）</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="control-group">
+
+                                        <!-- 出生年份-->
+                                        <label class="control-label" >出生年份</label>
+                                        <div class="controls">
+                                            <input id = "birthday" type="text" placeholder="如：1980" class="input-xlarge form-control">
+                                            <p class="help-block">请填写驾驶人护照出生年份</p>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="control-group">
+                                        <label class="control-label">选择驾照持有类型</label>
+                                        <div class="controls" id="controls">
+
+                                            <!-- 驾照类型 -->
+                                            <label class="radio-inline">
+                                                <input type="radio" value="1" id="inlineRadio1" checked="checked" name="group">
+                                                中国驾照
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" value="2" id="inlineRadio2" checked="checked" name="group"  >
+                                                香港驾照
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" value="3" id="inlineRadio3" checked="checked" name="group">
+                                                美国驾照
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" value="4" id="inlineRadio4" checked="checked" name="group">
+                                                加拿大驾照
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" value="5" id="inlineRadio5" checked="checked" name="group">
+                                                其他国家/地区驾照
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="box-2">
+                                    <div id="legends" class="">
+                                        <legend class="">如何与您联系</legend>
+                                    </div>
+                                    <div class="contact">
+
+
+                                        <div style="float: left;">
+                                            <div>
+                                                <label class="control-label">称谓</label>
+                                            </div>
+                                            <div class="contact-1-left">
+                                                <select id = "sirOrMadam" class="input-xlarge form-control" style="height:34px;width:135px;">
+                                                    <option>先生</option>
+                                                    <option>女士</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div style="float: left; margin-left: 20px">
+                                            <div class="contact-1-right">
+                                                <label class="control-label" >姓名</label>
+                                                <div class="contact-1-right" >
+                                                    <input id="name" type="text" style="width: 260px;height:34px" placeholder="中国用户填写中文名,如：张三" class="input-xlarge form-control">
+                                                    <!--<p class="help-block">Supporting help text</p>-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="control-group1" style="clear: both ">
+                                        <label class="control-label">联系电话</label>
+                                        <div class="contact-2-left">
+                                            <select id="tel" class="input-xlarge form-control" style="float: left; height:34px;width:135px">
+                                                <option>中国+86</option>
+                                                <option>美国+1</option>
+                                                <option>香港+852</option>
+                                                <option>台湾+886</option>
+                                                <option>澳大利亚+61</option>
+                                            </select>
+
+
+                                            <div class="contact-2-right" style="float: left;margin-left: 20px">
+                                                <input type="text" id="tel-num" style="width: 260px;height:34px" placeholder="预定成功后会收到短信通知" class="input-xlarge form-control">
+                                                <!--<p class="help-block">Supporting help text</p>-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group" style="clear: both ">
+                                        <label class="control-label" >电子邮箱</label>
+                                        <div class="controls">
+                                            <input id="mail" type="text" size="39" placeholder="预订成功后会收到订单确认邮件" class="input-xlarge form-control" >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box-3">
+                                    <div id="legend" class="">
+                                        <legend class="">报销凭证</legend>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <!-- Multiple Checkboxes -->
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="需要报销凭证">
+                                                需要报销凭证
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">发票抬头</label>
+                                        <div class="controls">
+                                            <input type="text" placeholder="如：张三" class="input-xlarge form-control">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">发票内容</label>
+                                        <div class="controls">
+
+                                            <label class="radio-inline">
+                                                <input type="radio" value="1" id="inlineRadio6" checked="checked" name="group">
+                                                明细
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" value="2" id="inlineRadio7" checked name="group">
+                                                燃油
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">备注</label>
+                                        <p></p>
+                                        <textarea class="b-textarea form-control"
+                                                  name="demand"
+                                                  style="width:650px;height:200px"
+                                                  placeholder="如果有额外需求或疑问，请填写留言，我们将在核实后答复。留言仅作为咨询解疑，任何与订单相关的内容均以订单内容为准。"></textarea>
+                                    </div>
+
+                                    <div class="pay" >
+                                        <p></p>
+                                        <p class="pay-p" style="float: left;" >点击支付按钮,表示您已阅读并同意 <a href="javascript:;" class="fee-detail">《租车规则和服务条款》</a></p>
+
+                                        <a id = "pay" style="display: block;width:150px;float: left;margin-left: 119px" href="../html/orderConfirm.html" class="btn btn-danger">立即支付</a>
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div >
+
+
+
+
+
+                <div class="col-xs-3" style="margin-top:77px" >
+                    <div class="box-right ">
+                        <div class="b-r-1">
+                            <div class="br-container1">
+                                <div class="br-con1-1">
+                                    <div class="car-name">
+                                        <h4 class="tit">起亚 Rio或同组车型</h4>
+                                        <p>小型轿车(Economy)</p>
+                                    </div>
+                                    <div class="car-info">
+                                        <img width="90" border="0" class="fn-left" src="../image/carinfo.jpg">
+                                        <div class="car-introduce">
+                                            <div class="car-detail">
+                                                <p>自动挡/4门/5座</p>
+                                            </div>
+                                            <div class="company">
+                                                <p class="company-en" title="ALAMO">ALAMO</p>
+                                            </div>
+                                        </div>
+                                    </div></div>
+                                <div class="important-tips">
+                                    <div class="take">
+                                        <img class="tit-icon" src="../image/qu.png" width="24" height="24">
+                                        <div class="take-tips">
+                                            <p class="take-time">2016-01-03  周二 10:00</p>
+                                            <p class="take-place">澳大利亚 墨尔本 -  Airport</p>
+                                        </div></div>
+                                    <div class="take">
+                                        <img class="tit-icon" src="../image/huan.png" width="24" height="24">
+                                        <div class="take-tips">
+                                            <p class="take-time">2016-02-05  周四 10:00</p>
+                                            <p class="take-place">澳大利亚 墨尔本 - Airport</p>
+                                        </div></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="b-r-2">
+                            <div class="br-container2">
+                                <legend class="fee">订单费用</legend>
+                                <div class="fee-body">
+                                    <a href="javascript:;" class="fee-detail">套餐包含</a>
+                                    <div class="fee-detail">
+                                        <div class="line">
+                                            <span class="rmb-1" title="车辆租金(7天)">车辆租金(7天)</span>
+                                            <span class="rmb1-right">
+                                                 <i class="fn-rmb">¥</i>
+                                                 <em id="rmb1-text">1394</em>
+                                            </span>
+                                        </div>
+                                        <div class="line">
+                                            <span class="rmb-2" title="合计费用">合计费用</span>
+                                            <span class="rmb2-right">
+                                                 <i class="fn-rmb">¥</i>
+                                                 <em id="rmb2-text">1394</em>
+                                            </span>
+                                        </div>
+                                        <div class="line">
+                                            <span class="rmb-3" title="现在需付">现在需付</span>
+                                            <span class="rmb3-right">
+                                                 <i class="fn-rmb">¥</i>
+                                                 <em id="rmb3-text">1394</em>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row c-friend">
+                <div class="col-xs-12">
+                    <dl class="friend">
+                        <dt ><p>合作伙伴</p></dt>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row c-box">
+                <div class="col-xs-2">
+                    <p>关于</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>条款</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>帮助</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 ">
+                    <div class="pull-right">
+                        <img src="#"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row c-link">
+                <div class="col-xs-12">
+                    <p >友情链接：</p>
+                    <ul >
+                        <li>
+                            <a>链接1</a>
+                        </li>
+                        <li>
+                            <a>链接2</a>
+                        </li>
+                        <li>
+                            <a>链接3</a>
+                        </li>
+                        <li>
+                            <a>链接4</a>
+                        </li>
+                        <li>
+                            <a>链接5</a>
+                        </li>
+                        <li>
+                            <a>链接6</a>
+                        </li>
+                        <li>
+                            <a>链接7</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row c-bottom">
+                <a  href="*" style="color: white;">Copyright ©2016 abc海外租车公司 版权所有  京ICP证012345号</a>
+
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<script src="../js/indexNav.js"></script>
+<script src="../js/memu.js"></script>
+</body>
+</html>

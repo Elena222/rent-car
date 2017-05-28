@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="CarType" table="cartype">
+		<id name="carTypeId" type="int" column="carTypeId"> 
+            <generator class="native"/>
+		</id>
+		<property name="carTypeName" type="String" column="carTypeName" length="20" not-null="true"/>
+		
+		<property name="carTypeDesc" type="text" column="carTypeDesc" not-null="true"/>
+		
+		<many-to-one name="carCompany" class="Company">
+			<column name="companyid"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

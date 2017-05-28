@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="Car" table="car">
+		<id name="carId" type="int" column="carId"> 
+            <generator class="native"/>
+		</id>
+		<property name="carName" type="string" column="carName" length="20" />
+		<property name="carPrice" type="double" column="carPrice" />
+		<property name="doorNum" type = "double" column="doorNum" ></property>
+		<property name="seatNum" type = "double" column="seatNum" ></property>
+		<property name="gear" type = "string" column = "gear" ></property>
+		<property name="carDes" type="text" column="carDes" ></property>
+		<property name="carPhoto" type="string" column="carPhoto" ></property>
+	
+		<many-to-one name="carCompany" class="Company">
+			<column name="companyId"></column>
+		</many-to-one>
+		
+		<set name="carProducts" >
+			<key column="carId"></key>
+			<one-to-many class="Product"/>
+		</set>
+		
+		<many-to-one name="carType" class="Type">
+			<column name="typeId"></column>
+		</many-to-one>
+		
+		<set name="carOrders">
+			<key column="carId"></key>
+			<one-to-many class="Order"/>
+		</set>
+		
+	</class>
+</hibernate-mapping>

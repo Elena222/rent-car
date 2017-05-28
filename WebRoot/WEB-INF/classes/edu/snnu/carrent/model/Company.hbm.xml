@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="Company" table="company">
+		<id name="companyId" type="int" column="companyId"> 
+            <generator class="native"/>
+		</id>
+		<property name="companyName" type = "string" column="companyName" length="20" ></property>
+		
+		<property name="companyScore" type = "int" column = "companyScore" length="20"></property>
+		
+		<property name="companyPhoto" type="string" column="companyPhoto"></property>
+		
+		<property name="companyDes" type="text" column="companyDes"></property>
+		
+		<property name="companyTel" type="string" column="companyTel" length="20"></property>
+	
+		<set name="companyCar" >
+			<key column="companyId"></key>
+			<one-to-many class="Car"/>
+		</set>
+		<set name="companyOrder" >
+			<key column="companyId"></key>
+			<one-to-many class="Order"/>
+		</set>
+	</class>
+</hibernate-mapping>

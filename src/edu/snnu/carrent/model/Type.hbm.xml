@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="Type" table="type">
+		<id name="typeId" type="int" column="typeId"> 
+            <generator class="native"/>
+		</id>
+		<property name="typeName" type="string" column="typeName"  />
+		<property name="typeDesc" type="string" column="typeDesc" />
+		
+		<set name="typeCars" >
+			<key column="typeId"></key>
+			<one-to-many class="Car"/>
+		</set>
+		
+		
+	</class>
+</hibernate-mapping>

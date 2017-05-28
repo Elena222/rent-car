@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单查询</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js/"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/orderInquiry.css">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link rel="stylesheet" href="../css/foot.css">
+
+</head>
+<body>
+
+<div class="c-all">
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登录</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Inq-main">
+        <div class="container">
+            <div class="row inquiry-top">
+               <p><span style="color: #1d9beb">订单查询</span>&nbsp;/&nbsp;我的订单</p>
+            </div>
+            <div class="row c-navbar">
+                <div class="col-xs-6"><p>宝贝</p></div>
+                <div class="col-xs-3"><p>单价</p></div>
+                <div class="col-xs-3" >
+                    <p style="text-align: left;">交易状态</p>
+                    <p style="margin-top: -30px;margin-left: 90px;">订单操作</p>
+                </div>
+
+            </div>
+            <div class="inquiry-main" id="inquiry-main">
+                <!--<div class="row order-date">-->
+                   <!--<div class="col-xs-3">-->
+                       <!--<p>下单时间：2016-02-12 17：12：02</p>-->
+                   <!--</div>-->
+                   <!--<div class="col-xs-9">-->
+                       <!--<p>订单编号：27364568234234</p>-->
+                   <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row order-main">-->
+                    <!--<div class="col-xs-2" style="text-align: left">-->
+                        <!--<img src="../image/car-detail.png">-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4" style="text-align: left">-->
+                        <!--<p style="font-size:20px">起亚 Rio 或同组车型</p>-->
+                        <!--<p>取车位置：洛杉矶首都机场&nbsp;&nbsp;&nbsp;还车位置：洛杉矶首都机场</p>-->
+                        <!--<p>取车时间：2016-02-19&nbsp;&nbsp;&nbsp;还车时间：2016-03-12</p>-->
+                        <!--<p>服务：司导服务，儿童座椅</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 mon"><P>￥4563</P></div>-->
+                    <!--<div class="col-xs-3" style="text-align: left">-->
+                        <!--<p style="float: left;">交易成功</p>-->
+                        <!--&lt;!&ndash;<a class="c-but btn btn-danger">确认订单</a>&ndash;&gt;-->
+                        <!--<a class="c-comfirm">确认订单</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row order-date">-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<p>下单时间：2016-02-12 17：12：02</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-9">-->
+                        <!--<p>订单编号：27364568234234</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row order-main">-->
+                    <!--<div class="col-xs-2" style="text-align: left">-->
+                        <!--<img src="../image/car-detail.png">-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4" style="text-align: left">-->
+                        <!--<p style="font-size:20px">起亚 Rio 或同组车型</p>-->
+                        <!--<p>取车位置：洛杉矶首都机场&nbsp;&nbsp;&nbsp;还车位置：洛杉矶首都机场</p>-->
+                        <!--<p>取车时间：2016-02-19&nbsp;&nbsp;&nbsp;还车时间：2016-03-12</p>-->
+                        <!--<p>服务：司导服务，儿童座椅</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 mon"><P>￥4563</P></div>-->
+                    <!--<div class="col-xs-3" style="text-align: left">-->
+                        <!--<p style="float: left;">交易成功</p>-->
+                        <!--<a class="c-comfirm">确认订单</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row order-date">-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<p>下单时间：2016-02-12 17：12：02</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-9">-->
+                        <!--<p>订单编号：27364568234234</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row order-main">-->
+                    <!--<div class="col-xs-2" style="text-align: left">-->
+                        <!--<img src="../image/car-detail.png">-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4" style="text-align: left">-->
+                        <!--<p style="font-size:20px">起亚 Rio 或同组车型</p>-->
+                        <!--<p>取车位置：洛杉矶首都机场&nbsp;&nbsp;&nbsp;还车位置：洛杉矶首都机场</p>-->
+                        <!--<p>取车时间：2016-02-19&nbsp;&nbsp;&nbsp;还车时间：2016-03-12</p>-->
+                        <!--<p>服务：司导服务，儿童座椅</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 mon"><P>￥4563</P></div>-->
+                    <!--<div class="col-xs-3" style="text-align: left">-->
+                        <!--<p style="float: left;">交易成功</p>-->
+                        <!--<a class="c-comfirm">确认订单</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+<div class="footer" >
+    <div class="container">
+        <div class="row c-friend">
+            <div class="col-xs-12">
+                <dl class="friend">
+                    <dt>
+                    <p>合作伙伴</p></dt>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                    <dd>
+                        <img src="../image/bank.jpg">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row c-box">
+            <div class="col-xs-2">
+                <p>关于</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>条款</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <p>帮助</p>
+                <ul>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                    </li>
+                    <li>
+                        <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 ">
+                <div class="pull-right">
+                    <img src="#"/>
+                </div>
+            </div>
+        </div>
+        <div class="row c-link">
+            <div class="col-xs-12">
+                <p>友情链接：</p>
+                <ul>
+                    <li>
+                        <a>链接1</a>
+                    </li>
+                    <li>
+                        <a>链接2</a>
+                    </li>
+                    <li>
+                        <a>链接3</a>
+                    </li>
+                    <li>
+                        <a>链接4</a>
+                    </li>
+                    <li>
+                        <a>链接5</a>
+                    </li>
+                    <li>
+                        <a>链接6</a>
+                    </li>
+                    <li>
+                        <a>链接7</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row c-bottom">
+            <a href="*" style="color: white;">Copyright ©2016 abc海外租车公司 版权所有 京ICP证012345号</a>
+
+        </div>
+    </div>
+    <br>
+</div>
+
+
+
+<script src="../js/indexNav.js"></script>
+<script src="../js/orderConfirm.js"></script>
+<script src="../js/jquery-1.7.2.js"></script>
+<script src="../js/register.js"></script>
+</body>
+</html>

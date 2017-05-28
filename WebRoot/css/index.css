@@ -1,0 +1,407 @@
+*{
+    padding: 0;
+    margin:0;
+    border:0;
+    font-family:"微软雅黑";
+
+}
+body{
+    background-color: #efffff;
+}
+html{
+    /*overflow:-Scroll;*/
+    overflow-x:hidden;
+    max-width:2000px;
+    min-width:1000px;
+    min-height: 1000px;
+    width:100%;
+    height: 100%;
+    margin:0 auto;
+    padding:0;
+
+}
+
+
+
+.c-header{
+    background-color: #0f0f0f;
+}
+.c-header a:hover{
+    color:#FFA336;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.c-search{
+    clear:both;
+    width:100%;
+    height:620px;
+    padding-top:200px;
+    padding-bottom:150px;
+}
+
+.c-backgroung img{
+    /*border-bottom:5px solid white;*/
+    width:100%;
+    height:630px;
+    margin-top: -200px;
+
+    /*margin-bottom: 80px;*/
+}
+.c-search .c-ground {
+    box-shadow: inset 1px 1px 30px rgba(90,89,90,.90);
+    background:#262626;
+    /*border:1px solid #f5f5f5;*/
+    padding:30px;
+    /*margin-top:900px;*/
+}
+.c-search  .bring p,.back p{
+    font-size: 20px;
+    color:white;
+
+}
+.c-search  #bring-tk,#back-tk{
+    margin-left: 5%;
+    float: right;
+}
+.c-search  .bring{
+    margin-bottom: 20px;
+    padding-left: 5%;
+    padding-right:5%;
+}
+.c-search  .back{
+    margin-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.c-search  #bring-pk,.c-search #back-pk,.c-search #bring-tk,.c-search #back-tk{
+    width: 47%;
+    height: 40px;
+
+}
+ .c-but p{
+    padding-left: 5%;
+}
+.c-search  .c-but p{
+    float: left;
+    font-size: 16px;
+    color:white;
+}
+.c-search  .c-but a{
+    width: 200px;
+    height: 40px;
+    border-radius: 0.1em;
+    background-color: red;
+    margin-left: 27.6%;
+
+}
+
+
+
+
+
+.m-main-service{
+    margin-top:90px;
+    letter-spacing: 3px;
+}
+.sale-left,.sale-right,.question-left,.question-right,.assess-left,.assess-right{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.service{
+    padding-left: 0;
+    padding-right: 0;
+    /*margin-right: 5px   ;*/
+
+}
+
+.stripes {
+    height:140px;
+    width: 279px;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 10px 10px;
+    -moz-box-shadow: 1px 1px 8px gray;
+    -webkit-box-shadow: 1px 1px 8px gray;
+    box-shadow: 1px 1px 8px gray;
+}
+.stripes h3,.stripes h4{
+    margin-left:20px;
+    color:white;
+    letter-spacing: 1px;
+}
+.stripes h3{
+    font-weight:600;
+
+}
+
+.stripes h4{
+    padding-top: 30px;
+}
+
+
+.angled-135 ,.angled-136,   .angled-137,.angled-138{
+    background-color: #c29;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, .1) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .1) 50%,
+            rgba(255, 255, 255, .1) 75%,
+            transparent 75%,
+            transparent
+    );
+}
+.angled-136{
+    background-color: deepskyblue;
+}
+.angled-137{
+    background-color:darkorange;
+}
+.angled-138{
+    background-color: lightgreen;
+}
+.service-foot p{
+    margin-left:20px;
+    margin-right: 20px;
+    padding-top: 5px;
+}
+.service-foot{
+    box-shadow: 1px 1px 8px gray;
+    width: 279px;
+    height:60px;
+    margin-right: 20px;
+    background: white;
+    /*margin-top: -10px;*/
+}
+.m-service:hover{
+    cursor:pointer;
+    /*box-shadow: 1px 1px 8px gray;*/
+    /*margin-top: -10px;*/
+}
+.m-service P{
+    color:black;
+}
+
+
+
+
+
+.m-main-sale{
+    margin-top:40px;
+
+}
+.m-title p{
+    font-size:30px;
+    font-weight:500;
+    font-family: "微软雅黑";
+    letter-spacing: 3px;
+}
+/*.sale-left img{*/
+    /*width:100%;*/
+    /*height:591px;*/
+/*}*/
+.sale-middle{
+    padding-left:0;
+    padding-right:7px;
+
+}
+.sale-middle img{
+    display:block;
+    width:100%;
+    height:196px;
+    margin-bottom:1px;
+    background-color: antiquewhite;
+}
+
+.sale-right{
+    padding-left:0;
+    padding-right:0;
+    background: slategrey;
+}
+
+.sale-right p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.sale-right span{
+    text-align: center;
+    font-size:14px;
+    color:red;
+}
+.sale-right-r{
+    margin-bottom: 0;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    margin-right: 1px;
+    margin-left: 0;
+    height:196px;
+    width:100%;
+}
+.sale-right-r:hover{
+    /*background-color: #2aabd2;*/
+    /*cursor: pointer;*/
+    /*opacity: 0.4;*/
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.85;
+    cursor: pointer;
+}
+.sale-right img{
+    display:block;
+    width:80%;
+    height:100px;
+}
+
+
+
+
+
+
+
+
+
+.m-main-assess,
+.m-main-question{
+    margin-top:80px;
+}
+.m-main-question{
+    letter-spacing: 2px;
+}
+.m-main-assess{
+    letter-spacing:1px;
+}
+.m-main-assess img,
+.m-main-question img{
+    height:600px;
+    width:100%;
+}
+.question-image dt p{
+    color:#858585;
+    font-weight:lighter;;
+}
+
+.question-image img{
+    border-radius: 50px;
+}
+.wenTi{
+    padding-left:60px;
+    padding-top:50px;
+
+
+}
+.wenTi p{
+    font-size:16px;
+}
+.assess-right-content a,
+.wenTi a{
+    color:#1f1f1f;
+}
+.button{
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:8px;
+}
+.button button{
+    height:35px;
+    width:100%;
+    border:1px solid blanchedalmond;
+    border-radius: 5px;
+}
+
+.button button:hover{
+    border:1px solid red;
+}
+.assess-right-r,.question-right-r{
+    padding-right:10px;
+    padding-left:16px;
+}
+.assess,
+.question{
+    border:1px solid #dddddd;
+    padding-right:0;
+    padding-left:0;
+}
+
+.question{
+    margin-top: 4.5px;
+    height:610px;
+    background: #fcf8e3;
+    /*height:600px;*/
+}
+.question img{
+    height:608px;
+}
+.assess{
+    height:601px;
+    background: rgba(252, 244, 227, 0.71);
+}
+.assess-right{
+    padding-left: 5px;
+}
+.assess-left{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.question-image{
+    padding-left:40px;
+    padding-top:12px;
+
+}
+.question-image dl,.question-image dl p{
+    margin-bottom: 3px;
+}
+
+.question-img img{
+    width:100%;
+    height:294px;
+}
+.image1,.image2{
+    padding-left:3px;
+    padding-right:3px;
+    margin-top: 6px;
+}
+.image1 img,.image2 img{
+    width:100%;
+    height:300.6px;
+    /*border:1px solid grey;*/
+}
+.assess-right-content ul li{
+    padding-right: 18px;
+}
+.assess-right-content img{
+    width:50px;
+    height:50px;
+
+}
+.assess-right-content ul li{
+    list-style: none;
+    border:1px solid #eeeeee;
+}
+.assess-right-content ul li dl dd p{
+    text-align:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

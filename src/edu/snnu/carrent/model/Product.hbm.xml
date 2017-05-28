@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.snnu.carrent.model">
+	<class name="Product" table="product">
+		<id name="productId" type="int" column="productId"> 
+            <generator class="native"/>
+		</id>
+		<property name="productName" type="string" column="productName" length="20" />
+		<property name="productPrice" type="double" column="productPrice" />
+		
+		<set name="productOrders" >
+			<key column="productId"></key>
+			<one-to-many class="Order"/>
+		</set>
+		
+		<many-to-one name="productCar" class="Car">
+			<column name="carId"></column>
+		</many-to-one>
+		
+		<many-to-one name="productPackage" class="Package">
+			<column name="packageId"></column>
+		</many-to-one>
+		
+		<set name="productServices" table="serviceproduct" inverse="true">
+			<key column="productId"></key>
+			<many-to-many class="Service" column="serviceId"></many-to-many>
+		</set>
+		
+	</class>
+</hibernate-mapping>

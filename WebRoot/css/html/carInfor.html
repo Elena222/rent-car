@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车辆详情</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/carInfor.css">
+    <link rel="stylesheet" href="../css/indexNav.css">
+    <link rel="stylesheet" href="../css/foot.css">
+
+    <style>
+        #middle {
+            margin-top: 20px;
+            /*border: 1px solid darkgray;*/
+        }
+
+        /*#middle:before {*/
+            /*position: absolute;*/
+            /*content: "";*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*bottom: 0;*/
+            /*right: 0;*/
+            /*background: white;*/
+            /*background: linear-gradient(315deg, white 45%, #eeeeee 50%, #cccccc 50%, white 80%);*/
+            /*box-shadow: -1px 1px 1px rgb(0, 0, 0, 0.4);*/
+            /*transition-delay: 0.2s;*/
+            /*transition-property: height, width;*/
+        /*}*/
+
+        /*#middle:hover:before {*/
+            /*width: 80px;*/
+            /*height: 80px;*/
+        /*}*/
+    </style>
+</head>
+
+
+<body>
+<div class="all" style="background-color: white">
+
+
+    <div class="m-nav">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-xs-4 m-col m-nav-left-c " id="fix-left">
+                    <div class="row m-row m-nav-left-r">
+                        <div class="col-xs-9 col-lg-offset-3 m-nav-logo">
+                            <p><a href="#">COMPANY-ZUCHE</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-8 m-col m-nav-right-c" id="fix-right">
+                    <div class="row m-row m-nav-right-r">
+                        <div class="col-xs-8 m-nav-title">
+                            <ul>
+                                <li id=li1 style="border-radius: 0 0 0 30px"><p style="color: #0f0f0f"><a href="../html/index.html">首页</a></p></li>
+                                <li id=li2><p style="color: #0f0f0f"><a href="">国际租车</a></p></li>
+                                <li id=li3><p style="color: #0f0f0f"><a href="">国际驾照</a></p></li>
+                                <li id=li4 style="border-radius: 0 30px 0 0"><p style="color: #0f0f0f"><a href="../html/orderInquiry.html">订单查询</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-4 m-nav-login">
+                            <ul>
+                                <li id=li5 style="border-radius: 10px 0 0 10px"><p style="color: #0f0f0f"><a
+                                        href="../html/register.html">注册</a></p></li>
+                                <li id=li6 style="border-radius: 0 10px 10px 0"><p style="color: #0f0f0f"><a
+                                        href="../html/enter.html">登录</a></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div class="container">
+            <div class="row m-carInfor-top">
+
+                <!--<div class="col-xs-3 m-carInfor-c-left">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-10 col-xs-offset-1">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-12 m-carInfor-c-left-bigImage">-->
+                                    <!--<img src="../image/car-detail.png" alt="汽车大图">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="row m-carInfor-c-left-smallImage">-->
+                                <!--<div class="col-xs-3 m-carInfor-c-left-scar"><img src="../image/car-detail.png" alt="汽车小图"></div>-->
+                                <!--<div class="col-xs-3 m-carInfor-c-left-scar"><img src="../image/car-detail.png" alt="汽车小图"></div>-->
+                                <!--<div class="col-xs-3 m-carInfor-c-left-scar"><img src="../image/car-detail.png" alt="汽车小图"></div>-->
+                                <!--<div class="col-xs-3 m-carInfor-c-left-scar"><img src="../image/car-detail.png" alt="汽车小图"></div>-->
+                            <!--</div>-->
+                            <!--<div class="row m-carInfor-c-left-info">-->
+                                <!--<br>-->
+                                <!--<p>自动档 5座 4门</p>-->
+                                <!--<p>建议乘坐4人+2行李箱</p>-->
+                                <!--<p>小巧灵活，适合都市代步</p>-->
+                                <!--<br>-->
+
+                                <!--<p>取车：2016年1月3日</p>-->
+                                <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;澳大利亚墨尔本-airport</p>-->
+                                <!--<p>还车：2016年2月5日</p>-->
+                                <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;澳大利亚墨尔本-airport</p>-->
+                                <!--<br>-->
+                                <!--<p><a href="#">查看门店地址营业时间等信息</a></p>-->
+                                <!--<p>**取还车时间均为当地时间**</p><br><br>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <!--<div class="col-xs-6 m-carInfor-c-middle" id="middle">-->
+                    <!--<div class="row m-carInfor-c-middle-carPrice">-->
+                        <!--<div class="col-xs-12">-->
+                            <!--<p>-->
+                            <!--<h2>车辆名称：起亚 Rio<a href="#" style="font-size: 20px"> 或同组车型 </a><span style="font-size: 20px">（类似大众POLO、本田飞度）</span></h2></p>-->
+                            <!--<p>现在预订，到店支付！总价已包含异地还车费！含全额险！</p>-->
+                            <!--<p>车辆总价：<span style="font-size: 24px;color:red">￥3759</span>（7天租期，日均￥537）</p>-->
+                            <!--<p>套餐注意事项:</p>-->
+                            <!--<p style="text-indent:25px">-->
+                                <!--预付订单通常享受最优惠的价格，您提交订单时需要在线支付人民币 1394 元.-->
+                                <!--本套餐不包含加强型第三者险，而在美国造成第三者伤亡的赔付金额非常高，-->
+                                <!--因此取车时需在门店购买（门店价约¥537/天）</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row car-service">-->
+                        <!--<div class="m-carInfor-c-middle-carService">-->
+                            <!--<p>-->
+                            <!--<h3>可选服务及简单介绍：</h3></p>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-3" ><p><input type="checkbox" checked="checked">服务一：</p></div>-->
+                                <!--<div class="col-xs-9" style="padding-left:0">-->
+                                    <!--<p>服务一的简单介绍：******************************************-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;<p><input type="checkbox" checked="checked">服务一：******************迪斯科解放哈快捷回复垃圾死了***************&ndash;&gt;-->
+                            <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                           <!--<div class="row">-->
+                               <!--<div class="col-xs-3" ><p><input type="checkbox" checked="checked">服务二：</p></div>-->
+                               <!--<div class="col-xs-9" style="padding-left:0">-->
+                                   <!--<p>服务二的简单介绍：*******************************-->
+                                   <!--</p>-->
+                               <!--</div>-->
+                           <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row m-carInfor-c-middle-carPay">-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<h3>燃油说明:</h3>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-3 " style="margin-top: 23px">-->
+                            <!--<input type="radio" value="100" name="manyou">&nbsp;&nbsp;&nbsp;满油取还-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-3" style="margin-top: 23px">-->
+                            <!--<input type="radio" value="101" name="manyou">&nbsp;&nbsp;&nbsp;满油取还-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row m-carInfor-c-middle-carPay">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-xs-4">-->
+                                <!--<h3>&nbsp;&nbsp;支付方式:</h3>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-3 " style="margin-top: 23px">-->
+                                <!--<input type="radio" value="103" name="zhifu">&nbsp;&nbsp;&nbsp;线上支付-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-3" style="margin-top: 23px">-->
+                                <!--<input type="radio" value="104" name="zhifu">&nbsp;&nbsp;&nbsp;线下支付-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<br><br>-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="row car-pay">&ndash;&gt;-->
+                        <!--<div class="col-xs-6 col-xs-offset-4 m-carInfor-middle-carPay-inp" >-->
+                            <!--<a href="../html/memu.html" class="btn btn-danger"-->
+                            <!--style="display:block;width:160px">立即预订</a>-->
+                            <!--&lt;!&ndash;<a href="../html/memu.html">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<input class="btn btn-danger"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;type="button"&ndash;&gt;-->
+                                       <!--&lt;!&ndash;value="预&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定"&ndash;&gt;-->
+                                       <!--&lt;!&ndash;style="color:white;">&ndash;&gt;-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <!--<div class="col-xs-3 m-carInfor-c-right">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-10 col-xs-offset-1">-->
+                            <!--<div class="row m-carInfor-c-right-ico">-->
+                                <!--<div class="col-xs-10 col-xs-offset-2">-->
+                                    <!--<img src="../image/hertz.png    "-->
+                                         <!--alt="租车公司图标">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-xs-9  col-xs-offset-3 m-carInfor-c-right-info">-->
+                                <!--<p style=" width: 50%;">公司简单介绍：************</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="m-carInfor-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a style="color: #0000EE" href="#home" data-toggle="tab" aria-expanded="false">套餐包含</a></li>
+                        <li class=""><a style="color: #0000EE" href="#profile" data-toggle="tab" aria-expanded="true">用户评论</a></li>
+                        <li class=""><a style="color: #0000EE" href="#home" data-toggle="tab" aria-expanded="false">租车流程</a></li>
+                        <li class=""><a style="color: #0000EE" href="#profile" data-toggle="tab" aria-expanded="true">订单条款</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade" id="home">
+                            <p>R
+                                Foodood truood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't
+                                heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+                                cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+                                retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex
+                                squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel,
+                                butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney'sFoodood truood truck fixie locavore, accusamus
+                            mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                            stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                            qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                            cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's Foodood truood truck fixie locavore, accusamus
+                            mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                            stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                            qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                            cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'marfaw denim you
+                            probably haven' marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt
+                            tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles
+                            vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh
+                            mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip
+                            quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                        </div>
+                        <div class="tab-pane fade active in" id="profile">a nuFoodood truood truck fixie locavore, accusamus
+                            mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                            stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                            qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                            cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney'sFoodood truood truck fixie locavore, accusamus
+                            mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                            stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                            qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                            cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'Foodood truood truck
+                            fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven' marfaw denim you
+                            probably haven'lla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR
+                            leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
+                            booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
+                            PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                        <div class="tab-pane fade" id="dropdown1">
+                            <p>Etsy mixtape wayfarers, ethicalFoodood truood truck fixie locavore, accusamus mcsweeney's
+                                marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
+                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                                helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh
+                                mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan
+                                aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney'sFoodood truood truck fixie locavore, accusamus
+                            mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                            stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
+                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                            qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis
+                            cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'Foodood truood truck
+                            fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven' marfaw denim you
+                            probably haven' wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
+                            lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone
+                            skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                            Leggings gentrify squid 8-bit cred pitchfork.</p>
+                        </div>
+                        <div class="tab-pane fade" id="dropdown2">
+                            <p>Trust fund seitan letterpreFoodood truood Foodood truood truck fixie locavore, accusamus
+                                mcsweeney's marfaw denim you probably haven't heard of them jean shorts Austin. Nesciunt
+                                tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg
+                                carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+                                sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'Foodood truood truck
+                            fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'truck fixie
+                            locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean shorts
+                            Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+                            williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                            Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                            iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ood truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them
+                            jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            ck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven't heard of them jean
+                            shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
+                            tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                            synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+                            cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            truck fixie locavore, accusamus mcsweeney's marfaw denim you probably haven'ss, keytar raw denim
+                            keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan
+                            cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo
+                            park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+                            viral locavore cosby sweater.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="row ">
+                        <div class="col-xs-12 m-carInfor-middle-comInfo" id="fix">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td style="background-color: #39998D;width: 99.9%;"><p style="color:white">每日价格：&nbsp;&nbsp;<span style="color: darkred;font-size: 24px">￥537</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>车辆租金：&nbsp;&nbsp;￥3759</p></td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><p>合计费用：&nbsp;&nbsp;￥3864</p></td>
+
+                                </tr>
+                                <tr>
+                                    <td><p>现在需付：&nbsp;&nbsp;￥1394</p></td>
+
+                                </tr>
+
+                                <tr>
+                                        <td><p>
+                                            <a href="../html/memu.html">
+                                                <a style="width: 160px;display: block" href="../html/memu.html" class="btn btn-danger">立即预定</a>
+                                            </a>
+                                        </p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row c-friend">
+                <div class="col-xs-12">
+                    <dl class="friend">
+                        <dt>
+                        <p>合作伙伴</p></dt>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                        <dd>
+                            <img src="../image/bank.jpg">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row c-box">
+                <div class="col-xs-2">
+                    <p>关于</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">关于我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">联系我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">加入我们</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">媒体报道</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>条款</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">隐私条款</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">用户协议</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">分销联盟</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <p>帮助</p>
+                    <ul>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">常见问题</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">租车流程</a>
+                        </li>
+                        <li>
+                            <a herf="*" target="_blank" rel="nofollow">保险说明</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 ">
+                    <div class="pull-right">
+                        <img src="#"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row c-link">
+                <div class="col-xs-12">
+                    <p>友情链接：</p>
+                    <ul>
+                        <li>
+                            <a>链接1</a>
+                        </li>
+                        <li>
+                            <a>链接2</a>
+                        </li>
+                        <li>
+                            <a>链接3</a>
+                        </li>
+                        <li>
+                            <a>链接4</a>
+                        </li>
+                        <li>
+                            <a>链接5</a>
+                        </li>
+                        <li>
+                            <a>链接6</a>
+                        </li>
+                        <li>
+                            <a>链接7</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row c-bottom">
+                <a href="*" style="color: white;">Copyright ©2016 abc海外租车公司 版权所有 京ICP证012345号</a>
+
+            </div>
+        </div>
+        <br>
+    </div>
+
+</div>
+<script src="../js/indexNav.js"></script>
+<script src="../js/carIfor.js"></script>
+</body>
+</html>

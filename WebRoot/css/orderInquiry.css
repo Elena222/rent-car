@@ -1,0 +1,52 @@
+
+.inquiry-top{
+    margin-top: 120px;
+}
+.inquiry-top p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.c-navbar{
+    background-color: #C7D0D5;
+    border: 1px solid #C7D0D5;
+    padding-top: 15px;
+    /*padding-bottom: 5px;*/
+}
+.c-navbar p{
+    text-align: center;
+}
+.order-date{
+    margin-top: 10px;
+    background-color: #E6E6E6;
+    border: 1px solid #F2F2F2;
+    padding-top: 15px;
+}
+.inquiry-main{
+    margin-top: 40px;
+}
+.order-main{
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid #D8D8D8;
+    border-top:hidden;
+}
+.order-main .col-xs-4{
+    /*border-right: 1px solid lightgrey;*/
+}
+.order-main   .mon,.order-main  .col-xs-3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.order-main  .c-comfirm{
+    text-align: center;
+    margin-top: -5px;
+    margin-left: 90px;
+    text-decoration: none;
+    color: black;
+    /*background-color: lightgrey;*/
+    /*border: 1px solid lightgrey;*/
+    /*color: black;*/
+}
+.order-main a:hover{
+    color: #df4a43;
+}

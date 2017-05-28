@@ -1,0 +1,100 @@
+.footer{
+    /*height:800px;*/
+    background-color: #0e2744;
+    padding-top:2% ;
+    margin-top:75px;
+    letter-spacing: 1px;
+
+}
+.footer p{
+    font-size: 18px;
+    color: white;
+}
+
+.c-friend dl{
+    font-size: 18px;
+    color:white ;
+    /*padding-left: 10px;*/
+}
+.c-friend dt p{
+    font-size: 16px;
+}
+.c-friend dd{
+    float:left ;
+    margin-right: 10px;
+    margin-top: 10px;
+    /*padding*/
+}
+.c-friend p{
+    font-size: 18px;
+}
+
+.c-box{
+    color: white;
+
+}
+.c-box p{
+    font-size: 16px;
+    margin-top: 100px;
+}
+.c-box ul{
+    list-style: none;
+    padding: 0;
+}
+.c-box ul li{
+
+}
+.c-link a,.c-box ul li a{
+    list-style: none;
+    color:white;
+}
+.c-link a:hover,.c-box ul li a:hover{
+    text-decoration: none;
+    color:deepskyblue;
+    cursor: pointer;
+}
+.c-box a:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+.c-box img{
+    margin-top: 100px;
+}
+
+.c-link{
+    margin-top:50px;
+    font-size: 18px;
+}
+.c-link p{
+    color: white;
+    font-size: 16px;
+    float: left;
+}
+
+.c-link ul{
+    list-style: none;
+    float: left;
+}
+.c-link li{
+    float: left;
+    margin-left: 10px;
+}
+.c-link ul li a{
+    font-size: 16px;
+    text-decoration: none;
+}
+.c-link a:hover{
+    text-decoration: none;
+}
+.c-bottom{
+    margin-top: 40px;
+    text-align: center;
+
+}
+/*.c-bottom  a{*/
+    /*font-size: 14px;*/
+/*}*/
+/*.c-bottom p a:hover{*/
+    /*color: #CF6FC1;*/
+    /*!*text-decoration: none;*!*/
+/*}*/
